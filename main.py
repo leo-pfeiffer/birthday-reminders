@@ -43,9 +43,6 @@ def get_credential():
     credential = ServiceAccountCredentials.from_json_keyfile_dict(
         get_service_account_keyfile_from_env(), SCOPES
     )
-    # credential = ServiceAccountCredentials.from_json_keyfile_name(
-    #     SERVICE_ACCOUNT_KEY_FILE, SCOPES
-    # )
     if not credential or credential.invalid:
         raise Exception("Unable to authenticate using service account key.")
     return credential
