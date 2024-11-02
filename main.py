@@ -137,7 +137,9 @@ def generate_output(birthdays) -> str:
         output.append(f"Birthdays today: {len(today_birthdays)}\n")
         for birthday in today_birthdays:
             output.append(birthday["full_name"])
-            output.append(compile_message(birthday))
+            # todo: Temporarily disabled, since the ntfy app doesn't let me copy
+            #  these messages to the clipboard, so there's no point in sending them.
+            # output.append(compile_message(birthday))
         output.append("")
 
     if len(upcoming_birthdays) == 0:
