@@ -1,0 +1,1 @@
+I'm bad at remembering birthdays. This script, which runs every morning, checks my Google Calendar for upcoming birthdays and sends me a notification via [ntfy](https://ntfy.sh/) including a templated birthday message. 
