@@ -140,7 +140,7 @@ def generate_output(birthdays) -> str:
         output.append("")
 
     if len(upcoming_birthdays) == 0:
-        output.append("<strong>No upcoming birthdays.</strong>")
+        output.append("No upcoming birthdays.")
 
     else:
         output.append(f"Upcoming birthdays:")
