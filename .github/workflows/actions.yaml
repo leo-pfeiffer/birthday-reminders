@@ -27,4 +27,5 @@ jobs:
         env:
           CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
           SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.SERVICE_ACCOUNT_CREDENTIALS }}
+          NTFY_RESOURCE: ${{ vars.NTFY_RESOURCE }}
         run: python main.py

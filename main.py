@@ -25,6 +25,9 @@ CALENDAR_ID = os.getenv("CALENDAR_ID")
 if not CALENDAR_ID:
     raise Exception("Environment variable CALENDAR_ID not set.")
 
+NTFY_RESOURCE = os.getenv("NTFY_RESOURCE")
+if not NTFY_RESOURCE:
+    raise Exception("Environment variable NTFY_RESOURCE not set.")
 
 def get_service_account_keyfile_from_env():
     """
@@ -156,7 +159,7 @@ def get_title(birthdays):
 
 def send_message(message, title):
     requests.post(
-        "https://ntfy.sh/ljp-birthday-reminder",
+        f"https://ntfy.sh/{NTFY_RESOURCE}",
         data=message,
         headers={
             "Title": title,
