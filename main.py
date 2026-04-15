@@ -29,6 +29,8 @@ NTFY_RESOURCE = os.getenv("NTFY_RESOURCE")
 if not NTFY_RESOURCE:
     raise Exception("Environment variable NTFY_RESOURCE not set.")
 
+logging.info(f"{NTFY_RESOURCE=} {CALENDAR_ID=}")
+
 def get_service_account_keyfile_from_env():
     """
     Expects a env variable SERVICE_ACCOUNT_CREDENTIALS with the base64 encoded service account credentials.
